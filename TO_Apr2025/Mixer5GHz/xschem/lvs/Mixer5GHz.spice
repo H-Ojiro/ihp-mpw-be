@@ -1,4 +1,4 @@
-** sch_path: /home/shr25031/ihp-mpw-be/ihp-mpw-be/TO_Apr2025/Mixer5GHz/xschem/Mixer5GHz.sch
+** sch_path: /home/shr25031/ihp-mpw-be/TO_Apr2025/Mixer5GHz/xschem/Mixer5GHz.sch
 .subckt Mixer5GHz RFN RFP VDC IFP IFN IDC OSCN OSCP VCC ICC GNDC GNDD
 *.PININFO RFN:B RFP:B VDC:B IFP:B IFN:B IDC:B OSCN:B OSCP:B VCC:B ICC:B GNDC:B GNDD:B
 XM6 RFN LON net2 GNDD sg13_lv_nmos w=60.0u l=0.13u ng=10 m=1
@@ -27,8 +27,8 @@ XC3 VCC OSCP cap_cmim w=19.1e-6 l=10.7e-6 m=1
 XR3 OSCP VCC rppd w=4.35e-6 l=1.5e-6 m=1 b=0
 XC4 VCC OSCN cap_cmim w=19.1e-6 l=10.7e-6 m=1
 XR4 OSCN VCC rppd w=4.35e-6 l=1.5e-6 m=1 b=0
-XL1 VDC LOP GNDD inductor2 w=10e-6 s=10e-6 d=222e-6 nr_r=2 m=1
-XL2 VDC LON GNDD inductor2 w=10e-6 s=10e-6 d=222e-6 nr_r=2 m=1
-XL3 VCC OSCP GNDC inductor2 w=10e-6 s=10e-6 d=222e-6 nr_r=2 m=1
-XL4 VCC OSCN GNDC inductor2 w=10e-6 s=10e-6 d=222e-6 nr_r=2 m=1
+XL1 VDC LOP GNDD inductor2 w=10u s=10u d=222u a=1.596788e-08 nr=2 m=1
+XL2 VDC LON GNDD inductor2 w=10u s=10u d=222u a=1.596788e-08 nr=2 m=1
+XL3 VCC OSCP GNDC inductor2 w=10u s=10u d=222u a=1.596788e-08 nr=2 m=1
+XL4 VCC OSCN GNDC inductor2 w=10u s=10u d=222u a=1.596788e-08 nr=2 m=1
 .ends

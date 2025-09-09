@@ -1,8 +1,9 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 N 530 -10 530 20 {
 lab=#net1}
@@ -204,15 +205,15 @@ N -850 -420 -850 -330 {
 lab=LOP}
 N -950 -430 -850 -430 {
 lab=LOP}
-N -500 -540 -500 -520 {
+N -520 -540 -520 -520 {
 lab=VDC}
-N -500 -460 -500 -430 {
+N -520 -460 -520 -430 {
 lab=LON}
 N -430 -420 -430 -220 {
 lab=LON}
-N -500 -430 -430 -430 {
+N -520 -430 -430 -430 {
 lab=LON}
-N -600 -540 -500 -540 {
+N -600 -540 -520 -540 {
 lab=VDC}
 N -600 -590 -600 -540 {
 lab=VDC}
@@ -288,13 +289,13 @@ N -1990 -420 -1990 -320 {
 lab=OSCP}
 N -2090 -420 -1990 -420 {
 lab=OSCP}
-N -1640 -530 -1640 -510 {
+N -1660 -530 -1660 -510 {
 lab=VCC}
 N -1420 -530 -1420 -510 {
 lab=VCC}
 N -1570 -530 -1420 -530 {
 lab=VCC}
-N -1640 -450 -1640 -420 {
+N -1660 -450 -1660 -420 {
 lab=OSCN}
 N -1420 -450 -1420 -420 {
 lab=OSCN}
@@ -302,9 +303,9 @@ N -1570 -420 -1420 -420 {
 lab=OSCN}
 N -1570 -200 -1570 -120 {
 lab=OSCN}
-N -1640 -420 -1570 -420 {
+N -1660 -420 -1570 -420 {
 lab=OSCN}
-N -1740 -530 -1640 -530 {
+N -1740 -530 -1660 -530 {
 lab=VCC}
 N -1870 -530 -1740 -530 {
 lab=VCC}
@@ -352,13 +353,13 @@ N -850 -460 -850 -430 {
 lab=LOP}
 N -430 -540 -430 -520 {
 lab=VDC}
-N -500 -540 -430 -540 {
+N -520 -540 -430 -540 {
 lab=VDC}
 N -430 -460 -430 -430 {
 lab=LON}
 N -1570 -530 -1570 -510 {
 lab=VCC}
-N -1640 -530 -1570 -530 {
+N -1660 -530 -1570 -530 {
 lab=VCC}
 N -1570 -450 -1570 -420 {
 lab=OSCN}
@@ -532,7 +533,7 @@ b=0
 m=1
 lvs_format="@spiceprefix@name @pinlist @model w=@w l=@l m=@m b=@b"
 }
-C {sg13g2_pr/cap_cmim.sym} -500 -490 0 0 {name=C2
+C {sg13g2_pr/cap_cmim.sym} -520 -490 0 0 {name=C2
 model=cap_cmim
 w=11.745e-6
 l=9.445e-6
@@ -594,7 +595,7 @@ b=0
 m=1
 lvs_format="@spiceprefix@name @pinlist @model w=@w l=@l m=@m b=@b"
 }
-C {sg13g2_pr/cap_cmim.sym} -1640 -480 0 0 {name=C4
+C {sg13g2_pr/cap_cmim.sym} -1660 -480 0 0 {name=C4
 model=cap_cmim
 w=19.1e-6
 l=10.7e-6
@@ -623,40 +624,50 @@ value=1n
 footprint=1206
 device=inductor2
 spiceprefix=X
-w=10e-6
-s=10e-6
-d=222e-6
-nr_r=2}
+w=10u
+s=10u
+d=222u
+nr_r=2
+lvs_format="@spiceprefix@name @pinlist @device w=@w s=@s d=@d a=expr(8 * 0.414 * @nr_r * (@d * @w + @nr_r * @w * @w + @w * @s * (@nr_r - 1)) - 7.246 * @w * @w ) nr=@nr_r m=@m"
+
+}
 C {inductor2.sym} -430 -490 0 0 {name=L2
 m=1
 value=1n
 footprint=1206
 device=inductor2
 spiceprefix=X
-w=10e-6
-s=10e-6
-d=222e-6
-nr_r=2}
+w=10u
+s=10u
+d=222u
+nr_r=2
+lvs_format="@spiceprefix@name @pinlist @device w=@w s=@s d=@d a=expr(8 * 0.414 * @nr_r * (@d * @w + @nr_r * @w * @w + @w * @s * (@nr_r - 1)) - 7.246 * @w * @w ) nr=@nr_r m=@m"
+
+}
 C {inductor2.sym} -1990 -480 0 0 {name=L3
 m=1
 value=1n
 footprint=1206
 device=inductor2
 spiceprefix=X
-w=10e-6
-s=10e-6
-d=222e-6
-nr_r=2}
+w=10u
+s=10u
+d=222u
+nr_r=2
+lvs_format="@spiceprefix@name @pinlist @device w=@w s=@s d=@d a=expr(8 * 0.414 * @nr_r * (@d * @w + @nr_r * @w * @w + @w * @s * (@nr_r - 1)) - 7.246 * @w * @w ) nr=@nr_r m=@m"
+}
 C {inductor2.sym} -1570 -480 0 0 {name=L4
 m=1
 value=1n
 footprint=1206
 device=inductor2
 spiceprefix=X
-w=10e-6
-s=10e-6
-d=222e-6
-nr_r=2}
+w=10u
+s=10u
+d=222u
+lvs_format="@spiceprefix@name @pinlist @device w=@w s=@s d=@d a=expr(8 * 0.414 * @nr_r * (@d * @w + @nr_r * @w * @w + @w * @s * (@nr_r - 1)) - 7.246 * @w * @w ) nr=@nr_r m=@m"
+
+}
 C {iopin.sym} -2170 -600 0 1 {name=p19 lab=GNDC}
 C {local_gnd.sym} -1960 -450 0 0 {name=l5 lab=GNDC}
 C {local_gnd.sym} -1540 -450 0 0 {name=l6 lab=GNDC}
