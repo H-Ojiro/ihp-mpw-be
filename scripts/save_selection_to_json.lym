@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description/>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <priority>0</priority>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>import pya
+import json
+import os
+
+# Get the current view and layout
+app = pya.Application.instance()
+mw = app.main_window()
+lv = mw.current_view()
+layout = lv.active_cellview().layout()
+
+# create the update dictionary
+updates = {"cells": {}}
+cell_name = lv.active_cellview().cell.name
+updates["cells"][cell_name] = []
+
+# Convert selection into a list of dicts
+json_data = []
+for s in lv.each_object_selected():
+        #entry = {"layer": None, "type": None, "data": None}
+        print(s)
+
+        if not s.is_cell_inst():
+            shape = s.shape
+            transform = s.trans()
+            #layer_index = s.layer
+            #layer_info = ly.get_info(layer_index)
+            #entry["layer"] = f"{layer_info.layer}/{layer_info.datatype}"
+            #entry["layer"] = f"{s.layer}"
+            info = layout.get_info(s.layer)
+
+            if shape.is_box():
+                box = shape.box.transformed(transform)
+                entry = {
+                   "action": "add",
+                   "type": "box",
+                   "layer": [info.layer, info.datatype],
+                   "box": [box.left, box.bottom, box.right, box.top]
+                }
+            elif shape.is_text():
+                text = shape.text
+                entry = {
+                    "action": "add",
+                    "type": "label",
+                    "layer": [info.layer, info.datatype],
+                    "text": text.string,
+                    "x": text.transformed(transform).trans.disp.x,
+                    "y": text.transformed(transform).trans.disp.y
+                }
+            else:
+                entry = {
+                   "action": "ignore",
+                   "type": "other"
+                }
+        else:
+              entry = {
+                 "action": "ignore",
+                 "type": "non-shape"
+              }
+              
+        updates["cells"][cell_name].append(entry)
+        #selection_data.append(entry)
+
+
+# Open save file dialog
+filename = pya.QFileDialog.getSaveFileName(
+    None,
+    "Save selection as JSON",
+    "",
+    "JSON Files (*.json);;All Files (*)"
+)
+
+if filename:
+    with open(filename, "w") as f:
+        json.dump(updates, f, indent=2)
+
+    pya.MessageBox.info("Selection Saved", f"Selection saved to:\n{filename}", pya.MessageBox.Ok)
+</text>
+</klayout-macro>
