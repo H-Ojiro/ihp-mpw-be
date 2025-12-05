@@ -1,0 +1,408 @@
+{
+  "cells": {
+    "FDM_QNC_00_LN_TIA": [
+      { "comment": "Add top level top_metal2 pins" },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          594000,
+          251445,
+          606000,
+          263445
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          494000,
+          251445,
+          506000,
+          263445
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          394000,
+          251445,
+          406000,
+          263445
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          694000,
+          251445,
+          706000,
+          263445
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          794000,
+          251445,
+          806000,
+          263445
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          594000,
+          936555,
+          606000,
+          948555
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          694000,
+          936555,
+          706000,
+          948555
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          794000,
+          936555,
+          806000,
+          948555
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          494000,
+          936555,
+          506000,
+          948555
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          394000,
+          936555,
+          406000,
+          948555
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          794000,
+          594000,
+          806000,
+          606000
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          794000,
+          494000,
+          806000,
+          506000
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          794000,
+          694000,
+          806000,
+          706000
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          394000,
+          594000,
+          406000,
+          606000
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          394000,
+          494000,
+          406000,
+          506000
+        ]
+      },
+      {
+        "action": "add",
+        "type": "box",
+        "layer": [
+          134,
+          2
+        ],
+        "box": [
+          394000,
+          694000,
+          406000,
+          706000
+        ]
+      },
+      { "comment": "Add top level top_metal2 labels" },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "RFOUT",
+        "x": 800860,
+        "y": 598650
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 800860,
+        "y": 496510
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 800860,
+        "y": 693765
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "RFIN",
+        "x": 400860,
+        "y": 598650
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 400860,
+        "y": 496510
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 400860,
+        "y": 693765
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 601350,
+        "y": 943415
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "VCC1",
+        "x": 703490,
+        "y": 943415
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 800115,
+        "y": 943415
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "VCC3",
+        "x": 500235,
+        "y": 943415
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 405330,
+        "y": 943415
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "VCC2",
+        "x": 598650,
+        "y": 256585
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 496510,
+        "y": 256585
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 398885,
+        "y": 256585
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 698765,
+        "y": 256585
+      },
+      {
+        "action": "add",
+        "type": "label",
+        "layer": [
+          134,
+          25
+        ],
+        "text": "GND",
+        "x": 794670,
+        "y": 256585
+      }
+    ]
+  }
+}
