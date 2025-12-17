@@ -1,0 +1,12 @@
+git fetch
+git status | grep --color 'Changes not staged for commit'
+git checkout origin/tmp TO_202504.ipynb
+pre-commit run --files TO_202504.ipynb
+# Repeat until all 'Passed' at Clean notebook.., Refresh Git.., nb-clean
+git diff HEAD
+# If OK
+git add TO_202504.ipynb
+git commit -s -m "<message>"
+git diff HEAD~1
+# If OK
+git push

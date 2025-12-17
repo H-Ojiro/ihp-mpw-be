@@ -1,0 +1,66 @@
+** sch_path: /home/shr25031/ihp-mpw-be/TO_Apr2025/PA_180GHz/xschem/PA_180GHz.sch
+.subckt PA_180GHz VBB1 VBB2 RFIN VCC1B VCC2B VSS RFOUT VCC1A VCC2A
+*.PININFO VBB1:B VBB2:B RFIN:I VCC1B:B VCC2B:B VSS:B RFOUT:O VCC1A:B VCC2A:B
+XQnpn13G1 _net1 _net0 netq1 VSS npn13G2 Nx=8
+XQnpn13G2 _net1 _net0 netq1 VSS npn13G2 Nx=8
+XRrsil1 VBB1 _net0 sub! rsil w=2e-6 l=11e-6 m=1 b=0
+XCcap_rfcmim1 RFIN _net0 VSS cap_rfcmim w=4.6e-6 l=4.2e-6 wfeed=3.0e-6
+XRrppd2 _net1 VCC1B sub! rppd w=35e-6 l=0.5e-6 m=1 b=0
+XCcap_rfcmim3 _net1 _net2 VSS cap_rfcmim w=6.6e-6 l=6.1e-6 wfeed=3.0e-6
+XQnpn13G3 _net3 _net7 netq3 VSS npn13G2 Nx=8
+XQnpn13G4 _net3 _net7 netq3 VSS npn13G2 Nx=8
+XCcap_rfcmim4 _net2 _net7 VSS cap_rfcmim w=4.6e-6 l=4.5e-6 wfeed=3.0e-6
+XRrsil2 VBB1 _net7 sub! rsil w=2e-6 l=11e-6 m=1 b=0
+XRrppd1 _net3 VCC1B sub! rppd w=35e-6 l=0.5e-6 m=1 b=0
+XQnpn13G5 _net6 _net5 netq6 VSS npn13G2 Nx=10
+XQnpn13G6 _net6 _net5 netq6 VSS npn13G2 Nx=10
+XCcap_rfcmim5 _net3 _net4 VSS cap_rfcmim w=6.6e-6 l=5.3e-6 wfeed=3.0e-6
+XCcap_rfcmim6 _net4 _net5 VSS cap_rfcmim w=4.9e-6 l=4.3e-6 wfeed=3.0e-6
+XRrppd3 _net6 VCC2B sub! rppd w=35e-6 l=0.5e-6 m=1 b=0
+XRrsil3 VBB2 _net5 sub! rsil w=2e-6 l=12e-6 m=1 b=0
+XCcap_rfcmim7 _net6 RFOUT VSS cap_rfcmim w=5.2e-6 l=4.8e-6 wfeed=3.0e-6
+XQnpn13G7 _net9 _net8 netq9 VSS npn13G2 Nx=8
+XQnpn13G8 _net9 _net8 netq9 VSS npn13G2 Nx=8
+XRrsil7 VBB1 _net8 sub! rsil w=2e-6 l=11e-6 m=1 b=0
+XCcap_rfcmim8 RFIN _net8 VSS cap_rfcmim w=4.6e-6 l=4.2e-6 wfeed=3.0e-6
+XRrppd4 _net9 VCC1A sub! rppd w=35e-6 l=0.5e-6 m=1 b=0
+XCcap_rfcmim9 _net9 _net10 VSS cap_rfcmim w=6.6e-6 l=6.1e-6 wfeed=3.0e-6
+XQnpn13G9 _net11 _net15 netq11 VSS npn13G2 Nx=8
+XQnpn13G10 _net11 _net15 netq11 VSS npn13G2 Nx=8
+XCcap_rfcmim10 _net10 _net15 VSS cap_rfcmim w=4.6e-6 l=4.5e-6 wfeed=3.0e-6
+XRrsil8 VBB1 _net15 sub! rsil w=2e-6 l=11e-6 m=1 b=0
+XRrppd5 _net11 VCC1A sub! rppd w=35e-6 l=0.5e-6 m=1 b=0
+XQnpn13G11 _net14 _net13 netq14 VSS npn13G2 Nx=10
+XQnpn13G12 _net14 _net13 netq14 VSS npn13G2 Nx=10
+XCcap_rfcmim11 _net11 _net12 VSS cap_rfcmim w=6.6e-6 l=5.3e-6 wfeed=3.0e-6
+XCcap_rfcmim12 _net12 _net13 VSS cap_rfcmim w=4.9e-6 l=4.3e-6 wfeed=3.0e-6
+XRrppd6 _net14 VCC2A sub! rppd w=35e-6 l=0.5e-6 m=1 b=0
+XRrsil9 VBB2 _net13 sub! rsil w=2e-6 l=12e-6 m=1 b=0
+XCcap_rfcmim13 _net14 RFOUT VSS cap_rfcmim w=5.2e-6 l=4.8e-6 wfeed=3.0e-6
+XCcap_cmim1 VCC1A VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim2 VCC1A VSS cap_cmim w=10.5e-6 l=14.885e-6 m=1
+XCcap_cmim3 VCC1A VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim4 VCC1A VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim5 VCC2A VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim6 VCC2A VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim7 VCC1B VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim8 VCC1B VSS cap_cmim w=10.5e-6 l=14.885e-6 m=1
+XCcap_cmim9 VCC1B VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim10 VCC1B VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim11 VCC2B VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XCcap_cmim12 VCC2B VSS cap_cmim w=10.5e-6 l=15.0e-6 m=1
+XRrsil14 RFOUT RFOUT sub! rsil w=2.04e-6 l=28e-6 m=1 b=0
+XRrsil13 RFIN RFIN sub! rsil w=2.04e-6 l=28e-6 m=1 b=0
+RRFIN VSS RFIN res_topmetal2 w=15e-6 l=40.6e-6 m=2
+RRFOUT VSS RFOUT res_topmetal2 w=15e-6 l=73.1e-6 m=2
+RRM1 VSS netq1 res_topmetal2 w=15e-6 l=7.1e-6 m=1
+RRM2 VSS netq3 res_topmetal2 w=15e-6 l=7.1e-6 m=1
+RRM3 VSS netq6 res_topmetal2 w=15e-6 l=7.1e-6 m=1
+RRM4 VSS _net2 res_topmetal2 w=15e-6 l=18.1e-6 m=1
+RRM5 VSS _net4 res_topmetal2 w=15e-6 l=18.1e-6 m=1
+RRM6 VSS netq9 res_topmetal2 w=15e-6 l=7.1e-6 m=1
+RRM7 VSS netq11 res_topmetal2 w=15e-6 l=7.1e-6 m=1
+RRM8 VSS netq14 res_topmetal2 w=15e-6 l=7.1e-6 m=1
+RRM9 VSS _net10 res_topmetal2 w=15e-6 l=18.1e-6 m=1
+RRM10 VSS _net12 res_topmetal2 w=15e-6 l=18.1e-6 m=1
+.ends

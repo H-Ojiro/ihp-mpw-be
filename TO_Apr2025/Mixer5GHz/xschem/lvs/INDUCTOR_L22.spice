@@ -1,0 +1,5 @@
+** sch_path: /home/shr25031/ihp-mpw-be/TO_Apr2025/Mixer5GHz/xschem/INDUCTOR_L22.sch
+.subckt INDUCTOR_L22 LB22 LA22
+*.PININFO LB22:B LA22:B
+XL22 LA22 LB22 VSUB inductor2 w=5u s=1 d=222u a=7.73399e-09 nr=2 m=1
+.ends

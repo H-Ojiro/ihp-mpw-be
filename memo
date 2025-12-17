@@ -1,0 +1,57 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Create a new branch from an existing branch
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# git clone git@github.com:H-Ojiro/ihp-mpw-be.git
+git switch -c new_branch_name old_branch_name
+# Push the new branch to GitHub
+git push origin new_branch_name
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+# Add new branch
+#~~~~~~~~~~~~~~~~~~~~~~~~
+cd ihp-mpw-be
+git branch -r
+git checkout -b 6502-cpu
+git diff
+git push --set-upstream origin 6502-cpu
+git branch -vv
+git fetch
+git status
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+# Delete new branch
+#~~~~~~~~~~~~~~~~~~~~~~~~
+git branch -D 6502-cpu
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+# Change working repository
+#~~~~~~~~~~~~~~~~~~~~~~~~
+git remote set-url origin https://github.com/H-Ojiro/IHP-Open-PDK
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+# Change upstream
+#~~~~~~~~~~~~~~~~~~~~~~~~
+git push
+git remote remove upstream
+git remote add upstream https://github.com/d-m-bailey/ihp-mpw-be.git
+# git remote remove upstream
+# git remote add upstream git@github.com:H-Ojiro/ihp-mpw-be.git
+git remote -v
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+# Update local
+#~~~~~~~~~~~~~~~~~~~~~~~~
+git status
+git add <new_files>..
+# git commit --signoff [--message="message"]
+git commit -s [-m "message"]
+git diff
+git log
+git push --set-upstream origin 6502-cpu
+git status
+
+#~~~~~~~~~~~~~~~~~~~~~~~~
+# To clone github
+#~~~~~~~~~~~~~~~~~~~~~~~~
+export MPW=TO_Apr2025
+git clone https://github.com/IHP-GmbH/$MPW.git data

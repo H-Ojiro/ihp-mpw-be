@@ -1,0 +1,5 @@
+** sch_path: /home/shr25031/ihp-mpw-be/TO_Apr2025/Mixer5GHz/xschem/INDUCTOR_L21.sch
+.subckt INDUCTOR_L21 LB21 LA21
+*.PININFO LB21:B LA21:B
+XL21 LA21 LB21 VSUB inductor2 w=10u s=1 d=222u a=1.580968e-08 nr=2 m=1
+.ends

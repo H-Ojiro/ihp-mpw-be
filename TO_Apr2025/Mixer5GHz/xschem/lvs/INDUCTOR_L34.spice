@@ -1,0 +1,5 @@
+** sch_path: /home/shr25031/ihp-mpw-be/TO_Apr2025/Mixer5GHz/xschem/INDUCTOR_L34.sch
+.subckt INDUCTOR_L34 LB34 LA34
+*.PININFO LB34:B LA34:B
+XL34 LA34 LB34 VSUB inductor2 w=5u s=1 d=222u a=1.190456e-08 nr=3 m=1
+.ends

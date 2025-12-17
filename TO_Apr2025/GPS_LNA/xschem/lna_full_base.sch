@@ -1,0 +1,1 @@
+/home/shr25031/data/GPS_LNA/design_data/xschem/lna_full_base.sch
