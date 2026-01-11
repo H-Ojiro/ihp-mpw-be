@@ -1,0 +1,27 @@
+* NGSPICE file created from FMD_QNC_04_160GHz_LNA.ext - technology: ihp-sg13g2
+
+.global pwell $SUB 
+
+.subckt FMD_QNC_04_160GHz_LNA VCC VBB1 GND RF_OUTPUT RF_INPUT VBB2
+R0 VBB1 w_122970_120280# 4355.54004k $[rmod_rhigh] w=1.9u l=6u $SUB=GND
+R1 VCC a_94904_123356# 18.166k $[rmod_rsil] w=7.5u l=5u $SUB=GND
+C0 RF_INPUT w_94525_120329# cap_rfcmim w=10u l=15u c=0
+C1 VBB2 GND cap_cmim w=20u l=25u c=0 M=4
+R2 VCC a_123343_123371# 18.166k $[rmod_rsil] w=7.5u l=5u $SUB=GND
+C2 GND w_108577_120236# cap_rfcmim w=5.2u l=2.4u c=0
+C3 VBB1 GND cap_cmim w=20u l=25u c=0 M=6
+C4 a_108959_123264# GND cap_rfcmim w=32u l=3.72u c=0
+C5 VCC GND cap_cmim w=20u l=25u c=0 M=8
+C6 a_94904_123356# GND cap_rfcmim w=32u l=3.72u c=0
+C7 a_123343_123371# GND cap_rfcmim w=32u l=12.5u c=0
+C8 GND w_122970_120280# cap_rfcmim w=7.6u l=2.5u c=0
+R3 VBB1 w_108577_120236# 3639.75k $[rmod_rhigh] w=1.9u l=5u $SUB=GND
+C9 GND RF_OUTPUT cap_rfcmim w=3.2u l=2.4u c=0
+R4 VCC a_108959_123264# 18.166k $[rmod_rsil] w=7.5u l=5u $SUB=GND
+R5 VBB2 w_137064_120109# 4144k $[rmod_rhigh] w=2u l=6u $SUB=GND
+R6 VBB1 w_94525_120329# 4355.54004k $[rmod_rhigh] w=1.9u l=6u $SUB=GND
+C10 GND w_137066_120109# cap_rfcmim w=5.1u l=2.4u c=0
+R7 VCC a_137436_122630# 18.633k $[rmod_rsil] w=7.5u l=5.5u $SUB=GND
+C11 a_137436_122630# GND cap_rfcmim w=32u l=6.2u c=0
+.ends
+
