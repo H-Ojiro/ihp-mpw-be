@@ -97,7 +97,7 @@ C {sg13g2_pr/npn13G2.sym} 280 0 0 0 {name=Q1
 model=npn13G2
 Nx=4
 spiceprefix=X
-lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) m=@Nx"
+lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) le=@le we=@we m=@Nx"
 le=900e-9
 we=70.0n}
 C {local_gnd.sym} 300 140 0 0 {name=l1 lab=GND}
@@ -184,7 +184,7 @@ C {sg13g2_pr/npn13G2.sym} 720 -60 0 0 {name=Q2
 model=npn13G2
 Nx=4
 spiceprefix=X
-lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) m=@Nx"
+lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) le=@le we=@we m=@Nx"
 le=900e-9
 we=70.0n}
 C {sg13g2_pr/rsil.sym} 740 -430 0 0 {name=Rc2
@@ -267,7 +267,7 @@ C {sg13g2_pr/npn13G2.sym} 1160 -120 0 0 {name=Q3
 model=npn13G2
 Nx=2
 spiceprefix=X
-lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) m=@Nx"
+lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) le=@le we=@we m=@Nx"
 le=900e-9
 we=70.0n}
 C {local_gnd.sym} 1220 -120 0 0 {name=l24 lab=GND}
@@ -312,7 +312,7 @@ C {sg13g2_pr/npn13G2.sym} 1600 -180 0 0 {name=Q4
 model=npn13G2
 Nx=2
 spiceprefix=X
-lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) m=@Nx"
+lvs_format="@name @@C @@B @@E @model a=expr( @le * @we ) p=expr( ( @le + @we ) * 2 ) le=@le we=@we m=@Nx"
 le=900e-9
 we=70.0n}
 C {local_gnd.sym} 1660 -180 0 0 {name=l30 lab=GND}
