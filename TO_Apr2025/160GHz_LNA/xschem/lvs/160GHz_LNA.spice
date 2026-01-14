@@ -1,4 +1,4 @@
-** sch_path: /home/shr25031/ihp-mpw-be/ihp-mpw-be/TO_Apr2025/160GHz_LNA/xschem/160GHz_LNA.sch
+** sch_path: /home/shr25031/ihp-mpw-be/TO_Apr2025/160GHz_LNA/xschem/160GHz_LNA.sch
 .subckt 160GHz_LNA RF_INPUT GND VCC VBB1 RF_OUTPUT VBB2
 *.PININFO RF_INPUT:I GND:B VCC:B VBB1:B RF_OUTPUT:O VBB2:B
 XC1 RF_INPUT net1 GND rfcmim w=10.0e-6 l=15.0e-6 wfeed=6.0e-6
